@@ -1,0 +1,9 @@
+<h1>Welcome#home</h1>
+<p>Find me in app/views/welcome/home.html.erb</p>
+
+<%= form_tag(welcomes_path, method: :post) do %>
+  <%= select(:genre, :name,  @genres, {},
+  {multiple: true, size: '10em', name: 'genre[name][]'}) %>
+
+<%= submit_tag "Create" %>
+<% end %>
